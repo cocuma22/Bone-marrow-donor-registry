@@ -17,17 +17,17 @@ void drawGrill(boolean flag) {
   if (!flag) {                                                                  //visualizzazione grafico iscritti totale
     oriz_lines(y, totImmMax, 50, totImmMin, totImmMax, y_end, y_start);         //linee orizzontali
     vertical_lines(x, y_start - 10, y_end + 10, y_text, true);                        //linee verticali
-    labels("Numero di iscritti", - height / 4, MARGIN_OR / 3);
+    labels("Number of members", - height / 4, MARGIN_OR / 3);
   } else {                                                                      //visualizzazione grafici uomini e donne
     //grafico basso - uomini
     oriz_lines(y, uominiMax, 36, uominiMin, uominiMax, y_end, height / 2 + 20); 
     vertical_lines(x, height / 2 + 10, y_end + 10, y_text, true);  
-    labels("Numero di uomini", - 2 * height / 3 - 20, MARGIN_OR / 3);
+    labels("Number of males", - 2 * height / 3 - 20, MARGIN_OR / 3);
 
     //grafico alto - donne
     oriz_lines(y, donneMax, 55, donneMin, donneMax, height/ 2 - 30, y_start);  
     vertical_lines(x, y_start - 10, height / 2 - 20, height / 2, false);      
-    labels("Numero di donne", - height / 4, MARGIN_OR / 3);
+    labels("Number of females", - height / 4, MARGIN_OR / 3);
   }
 }
 
@@ -60,7 +60,7 @@ void vertical_lines(float x, float y_start, float y_end, float y_text, boolean f
 
 void labels(String s, float xPos, float yPos) {
   textAlign(LEFT, TOP);
-  text("Anni", width - MARGIN_OR, height - MARGIN_VER / 2 + 5);
+  text("Years", width - MARGIN_OR, height - MARGIN_VER / 2 + 5);
   pushMatrix();
   rotate(-HALF_PI);
   textAlign(LEFT, BOTTOM);
